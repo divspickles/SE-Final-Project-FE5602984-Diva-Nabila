@@ -1,0 +1,37 @@
+Program OnlineFoodOrdering #divspickles
+
+START
+Read and write "address" with String
+Read and write "delivery fee" with Number
+Display "menu_selection"
+if "menu_selection" == "food_menu"
+    Display "food_menu"
+else 
+    Display "drink_menu"
+Read and write "selected_food" with String
+Read and write "food_item" with Number
+Read and write "selected_drink" with String
+Read and write "drink_item" with Number
+Read and write "confirmed" with boolean 
+if "confirmed" is True
+    Store "total_price" with Calculate (("selected_food"*"food_item"*"price") + ("selected_drink"*"drink_item"*"price")) 
+    Print "total_price" 
+else
+    Print "total_price"
+    Back to line 6
+Store 'bills' = "total_price" + "delivery fee"
+Display "payment_method"
+Read and write "payment_method" with string
+if "payment_method" == "cash" 
+    print"bills"
+else
+    print"bills"
+    Display "enter e-wallet pin"
+Read and write "payment"
+if status "payment"=="succeed"
+    process order
+    print "payment succeed, please wait for the food." 
+else 
+    Back to line 22
+
+END
